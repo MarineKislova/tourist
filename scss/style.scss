@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Regular.eot");
+  src: local("☺"),
+    url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Gilroy-Regular.woff") format("woff"),
+    url("../fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display+SC:regular,italic,700,700italic,900,900italic&display=swap");
+
+@import "_mynullstyle.scss";
+@import "_mixin.scss";
+@import "_wrapperFlexStyle.scss";
+
+body {
+  font-family: "Gilroy";
+  color: #ffffff;
+  background-color: #0b1d26;
+  background-image: url(../img/header/HG_MG_VG.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+// Header
+
+.header {
+  @include adaptiv-value("padding", 80, 15, 0);
+
+  &__menu {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__logo {
+    color: #0b1d26;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    li {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      @include adaptiv-value("font-size", 18, 12, 0);
+      font-weight: 700;
+      @include adaptiv-value("line-height", 22, 18, 0);
+      @include adaptiv-value("margin-left", 40, 20, 0);
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #0b1d26;
+    }
+  }
+
+  &__account {
+    background-image: url(../img/header/account_circle_24px.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    // padding-left: 24px;
+    @include adaptiv-value("padding-left", 24, 18, 0);
+    @include adaptiv-value("font-size", 17, 11, 0);
+    @include adaptiv-value("line-height", 21, 17, 0);
+    color: #0b1d26;
+    @media (max-width: 768px) {
+      background-image: none;
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-evenly;
+    @include adaptiv-value("margin-top", 240, 50, 0);
+  }
+
+  &__follow {
+    display: flex;
+    writing-mode: sideways-lr;
+    transform: rotate(90deg);
+    p {
+      color: #0b1d26;
+      @include adaptiv-value("font-size", 18, 12, 0);
+      @include adaptiv-value("line-height", 22, 18, 0);
+      font-weight: 700;
+      text-align: left;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  &__middle {
+    h3 {
+      color: #fbd784;
+      @include adaptiv-value("font-size", 18, 12, 0);
+      font-weight: 400;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      color: #0b1d26;
+      font-family: "Playfair Display";
+      @include adaptiv-value("font-size", 88, 14, 0);
+      @include adaptiv-value("line-height", 100, 30, 0);
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+
+  &__start {
+    display: flex;
+    flex-direction: column;
+    color: #0b1d26;
+    @include adaptiv-value("font-size", 18, 12, 0);
+    @include adaptiv-value("line-height", 22, 18, 0);
+    font-weight: 700;
+    text-align: right;
+    a {
+      text-decoration: none;
+      color: #0b1d26;
+    }
+  }
+}
