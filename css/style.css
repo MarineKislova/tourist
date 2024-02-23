@@ -311,7 +311,7 @@ body {
   text-align: left;
 }
 .section__text p {
-  font-size: calc(10px + 8 * (100vw - 320px) / 1600);
+  font-size: calc(14px + 4 * (100vw - 320px) / 1600);
   line-height: calc(20px + 12 * (100vw - 320px) / 1600);
   margin-top: calc(10px + 17 * (100vw - 320px) / 1600);
   font-weight: 700;
